@@ -1,6 +1,6 @@
 {
   "name": "reconnect-ws",
-  "version": "0.0.0",
+  "version": "0.0.2-fork.1",
   "description": "Reconnect a websocket stream when it goes down.",
   "main": "index.js",
   "scripts": {
