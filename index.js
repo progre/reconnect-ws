@@ -4,6 +4,12 @@ var inject = require('reconnect-core');
 module.exports = inject(function () {
   // Create new websocket-stream instance
   var args = [].slice.call(arguments);
+  // Default ws object mode
+  if (!args[1]) {
+    args.push({objectMode: true})
+  } else if (!args[1].objectMode) {
+    args[1].objectMode = true;
+  }
   var ws = websocket.apply(null, args);
 
   // Copy buffer from old websocket-stream instance on the new one
